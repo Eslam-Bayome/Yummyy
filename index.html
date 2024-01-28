@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+
+    <link rel="stylesheet" href="main.css/bootstrap.min.css" />
+    <link rel="stylesheet" href="main.css/all.min.css" />
+    <link rel="stylesheet" href="main.css/main.css" />
+    <link rel="icon" href="Img/logo.png" />
+
+    <script src="main.js/jquery-3.7.1.min.js" defer></script>
+    <script src="main.js/bootstrap.bundle.min.js" defer></script>
+    <script src="main.js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="waiting">
+      <span class="loader"></span>
+    </div>
+
+    <nav>
+      <div class="nav-log">
+        <div class="home mt-3 ms-1 cursor">
+          <img src="Img/logo.png" alt="logo" class="w-75" />
+        </div>
+        <i class="fa-solid fa-bars" id="nav-click"></i>
+
+        <div class="icons d-flex flex-column justify-content-center">
+          <a href="#">
+            <i class="fa-solid fa-globe mb-2"></i>
+          </a>
+          <a href="#"> <i class="fa-solid fa-share-nodes"></i> </a>
+        </div>
+      </div>
+      <div class="nav-content position-fixed">
+        <div class="side-nav">
+          <div class="links">
+            <a href="#Search" id="displaySearch">Search</a>
+            <a href="#Categories" id="displayCate">Categories</a>
+            <a href="#Area" id="displayArea">Area</a>
+            <a href="#Ingredients" id="displayIngre">Ingredients</a>
+            <a href="#Contact" id="contact">Contact Us</a>
+          </div>
+          <div class="copyright">
+            <div class="icons text-white">
+              <a href="#">
+                <i class="fa-brands fa-square-facebook"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fa-solid fa-globe mb-2"></i>
+              </a>
+            </div>
+            <p class="text-white">Copyright Â© 2019 All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div class="container">
+        <form action="" class="d-flex mb-5 d-none" id="formSearch">
+          <input
+            type="text"
+            placeholder=" Search By Name"
+            name="search"
+            class="form-control bg-black me-4 text-white"
+            id="searchName"
+          />
+          <input
+            type="text"
+            placeholder=" Search By First Letter"
+            name="search2"
+            class="form-control bg-black text-white"
+            id="searchLetter"
+          />
+        </form>
+        <div class="row g-4" id="mealsContainer"></div>
+      </div>
+    </section>
+    <section class="bg-black d-none" id="us">
+      <div class="container position-fixed vaildation">
+        <form action="" class="row gy-4">
+          <div class="col-md-6">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter Your Name"
+              id="validName"
+            />
+            <div
+              class="alert alert-danger text-center d-none"
+              role="alert"
+              id="nameAlert"
+            >
+              Special characters and numbers not allowed
+            </div>
+          </div>
+          <div class="col-md-6">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Enter Your Email"
+              id="validEmail"
+            />
+            <div
+              class="alert alert-danger text-center d-none"
+              role="alert"
+              id="emailAlert"
+            >
+              Email not valid *exemple@yyy.zzz
+            </div>
+          </div>
+          <div class="col-md-6">
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Enter Your Phone"
+              id="validPhone"
+            />
+            <div
+              class="alert alert-danger text-center d-none"
+              role="alert"
+              id="phoneAlert"
+            >
+              Enter valid Phone Number
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <input
+              type="numbers"
+              class="form-control"
+              placeholder="Enter Your Age"
+              id="validAge"
+            />
+            <div
+              class="alert alert-danger text-center d-none"
+              role="alert"
+              id="ageAlert"
+            >
+              Enter valid age
+            </div>
+          </div>
+          <div class="col-md-6">
+            <input
+              type="password"
+              class="form-control"
+              id="validPassword"
+              placeholder="Enter Your Password"
+            />
+            <div
+              class="alert alert-danger text-center d-none"
+              role="alert"
+              id="passAlert"
+            >
+              Enter valid password *Minimum eight characters, at least one
+              letter and one number:*
+            </div>
+          </div>
+          <div class="col-md-6">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Re Password"
+              id="validRePass"
+            />
+            <div
+              class="alert alert-danger text-center d-none"
+              role="alert"
+              id="rePassAlert"
+            >
+              Enter valid Repassword
+            </div>
+          </div>
+          <button
+            class="btn-outline-danger btn w-auto m-auto mt-3"
+            id="validBtn"
+            disabled="true"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
